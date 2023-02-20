@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Comment</title>
+</head>
+<body>
+
+    <h1>Please Add Your Comments</h1>
+    <div id="comment-container"> 
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia neque iste ipsam! Culpa doloribus, laudantium necessitatibus illo ex iusto consequatur hic? Deleniti impedit maiores nihil vero quibusdam aliquam, id voluptates!</p>
+        <p>Necessitatibus, molestiae sint quas, possimus molestias vitae excepturi minus itaque deserunt harum consequuntur ut odit aspernatur aperiam aliquid aut. Numquam dolores quaerat sit ducimus voluptates corporis, natus harum ullam incidunt.</p>
+        <p>Magnam nostrum temporibus ipsam. Dolorem maxime quibusdam quisquam. Ratione fugiat nostrum dolorem voluptatibus hic nisi sit. Veritatis rerum iure, ullam harum consequatur, veniam vel ipsa perspiciatis est impedit quisquam temporibus?</p>
+    </div>
+    <div>
+        <textarea name="" id="new-comment-field" cols="80" rows="10"></textarea><br>
+        <button id="post-btn">Post Comment</button>
+    </div>
+
+
+    <script>
+        // STEP-1: ADD EVENT LISTENER TO THE BUTTON
+        document.getElementById('post-btn').addEventListener('click', function(){
+
+            // STEP-2: GET THE COMMENT INSIDE THE TEXT AREA
+            const txtField = document.getElementById('new-comment-field');
+            const newComment = txtField.value;
+
+            // STEP-3: CREATE NEW ELEMENTS AND SET THE VALUE FROM THE TEXT AREA
+            const p = document.createElement('p');
+            p.innerText = newComment;
+
+            // STEP-4: GET THE COMMENT CONTAINER & APPEND THE NEW VALUE
+            const commentContainer = document.getElementById('comment-container');
+            commentContainer.appendChild(p);
+
+            // STEP-5: CLEAR THE TEXT AREA
+            txtField.value = '';
+            
+        })
+    </script>
+    
+</body>
+</html>

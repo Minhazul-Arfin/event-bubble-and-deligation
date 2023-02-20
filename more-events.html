@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Events</title>
+</head>
+<body>
+    <h1>Explore More Events</h1>
+    <button id="click-me-btn">Click Me</button>
+    <input type="text" name="" id="txt-input">
+    
+
+    <script>
+        //  -----------------MOUSE EVENTS--------------------
+        // mouseenter, mousemove, click
+        // document.getElementById('click-me-btn').addEventListener('mouseenter', function(){
+        //     console.log("Button Trigged")
+        // })
+        // document.getElementById('click-me-btn').addEventListener('mousemove', function(){
+        //     console.log("Button Trigged")
+        // })
+
+
+        // -------------------TEXT FIELD EVENTS----------------
+        // focus, blur
+        // document.getElementById('txt-input').addEventListener('focus', function(){
+        //     console.log('Input field focused')
+        // })
+
+        // document.getElementById('txt-input').addEventListener('blur', function(){
+        //     console.log('Input field blured')
+        // })
+
+
+        // ------------------TEXT FIELD TYPING RELATED-------------
+        // document.getElementById('txt-input').addEventListener('keydown', function(event){
+        //     console.log(event.target.value);
+        // })
+
+        // document.getElementById('txt-input').addEventListener('keypress', function(event){
+        //     console.log(event.target.value);
+        // })
+
+        
+        document.getElementById('txt-input').addEventListener('keyup', function(event){
+            console.log(event.target.value);
+        })
+        
+
+
+    </script>
+</body>
+</html>

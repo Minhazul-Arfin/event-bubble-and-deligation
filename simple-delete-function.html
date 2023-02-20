@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Delete Function</title>
+</head>
+<body>
+    <h1 id="txt-info">Write the word 'delete' and remove this text</h1>
+    <input id="txt-field" type="text" placeholder="Please type 'delete'">
+    <button id="btn-delete" disabled>Delete</button>
+
+
+    <script>
+        document.getElementById('btn-delete').addEventListener('click', function(){
+            const txtInfo = document.getElementById('txt-info');
+            txtInfo.style.display = 'none';
+        })
+
+        document.getElementById('txt-field').addEventListener('keyup', function(event){
+            const txtValue = event.target.value;
+            const deteleBtn = document.getElementById('btn-delete');
+
+            if(txtValue === 'delete'){
+                deteleBtn.removeAttribute('disabled');
+            }
+            else{
+                deteleBtn.setAttribute('disabled', true);
+            }
+        })
+    </script>
+    
+</body>
+</html>
